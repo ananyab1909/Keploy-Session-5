@@ -1,0 +1,45 @@
+task: Generate unit tests for Drogon C++ REST API endpoints
+description: |
+  - The codebase is a REST API built using Drogon framework in C++.
+  - Each endpoint is implemented in a controller file and is protected using JWT auth.
+  - Write unit tests using Google Test for controller logic, especially public route handlers.
+  - Use TEST(SuiteName, TestName) with EXPECT_EQ, EXPECT_TRUE, etc.
+  - Focus on request handling, parameter validation, and service responses.
+  - Include <gtest/gtest.h> and relevant Drogon/controller headers.
+  - Test scenarios: success, failure (e.g., 404, 401), and edge cases.
+  - Output must be a valid .cpp file for each tested controller with Google Test cases.
+
+model: qwen2:0.5b
+input_dir: ./cpp_projects
+output_dir: ./tests
+language: cpp
+framework: gtest
+endpoint_categories:
+  - persons:
+      routes:
+        - GET /persons
+        - GET /persons/{id}
+        - GET /persons/{id}/reports
+        - POST /persons
+        - PUT /persons/{id}
+        - DELETE /persons/{id}
+  - departments:
+      routes:
+        - GET /departments
+        - GET /departments/{id}
+        - GET /departments/{id}/persons
+        - POST /departments
+        - PUT /departments/{id}
+        - DELETE /departments/{id}
+  - jobs:
+      routes:
+        - GET /jobs
+        - GET /jobs/{id}
+        - GET /jobs/{id}/persons
+        - POST /jobs
+        - PUT /jobs/{id}
+        - DELETE /jobs/{id}
+  - auth:
+      routes:
+        - POST /auth/register
+        - POST /auth/login

@@ -1,0 +1,19 @@
+task: Refine the generated Google Test unit tests
+instructions: |
+  - Remove any duplicate or redundant tests
+  - Ensure the test file includes necessary headers
+  - Improve test coverage by adding relevant edge cases
+  - Follow Google Test best practices
+  - Do not add comments or explanations
+  - Only return valid `.cpp` test code, formatted cleanly
+  - DO NOT output only one function — preserve everything given
+  - DO NOT remove any test functions
+  - DO NOT omit any test cases unless they are exact duplicates
+  - DO NOT shorten or truncate the output
+
+model: qwen2:0.5b
+input_dir: ./tests
+output_dir: ./refined_tests
+language: cpp
+framework: gtest
+scope: all_test_files

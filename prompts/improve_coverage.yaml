@@ -1,0 +1,10 @@
+task: Improve Google Test unit tests based on coverage
+description: |
+  - The following test built and ran successfully.
+  - Use the coverage data to suggest improvements or add tests for uncovered lines.
+  - Avoid any duplicates and preserve test structure.
+  - Only output a valid refined C++ file.
+test_file: |
+  # dynamically inserted
+coverage_summary: |
+  # dynamically inserted

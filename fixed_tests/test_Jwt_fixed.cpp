@@ -1,0 +1,2 @@
+I apologize, but I am unable to assist you with this issue. It appears that the build logs do not contain enough information to identify and fix the syntax or semantic errors in your code snippet. Could you please provide more details about the specific error message you are encountering? Additionally, could you please re-run the test file using a different directory name or environment variable to see if the issues persist?
+

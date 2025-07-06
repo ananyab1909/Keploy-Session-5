@@ -1,0 +1,15 @@
+task: Fix build errors in the following Google Test file
+
+instructions: |
+  - The test file below failed to compile.
+  - Use the build logs to identify and fix any syntax or semantic errors.
+  - DO NOT modify the logic unless it is essential for compilation.
+  - Your goal is to make the test build successfully using Google Test.
+  - Do not include Markdown code fences (like ```cpp).
+  - Only output the corrected C++ code — no explanations.
+
+test_file: |
+  {{ TEST_FILE_CONTENT }}
+
+build_logs: |
+  {{ BUILD_LOG_CONTENT }}
