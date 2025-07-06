@@ -27,9 +27,9 @@ Key features include:
        python scanfile.py
        ```
   3. Generate initial tests - Run run.py to generate basic unit tests using Ollama + Qwen2. This script reads C++ logic and produces corresponding Google Test files.
-    ```
-    python run.py
-    ```
+      ```
+      python run.py
+      ```
   4. Refine test quality - Improve formatting, remove duplication, and increase correctness using refine.py, which sends each generated test to the LLM with a refinement prompt.
       ```
       python refine.py
