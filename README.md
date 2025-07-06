@@ -17,31 +17,31 @@ Key features include:
 ## Implementation
 
   1. Clone the repository
-    ```
-    git clone https://github.com/ananyab1909/Keploy-Session-5.git
-    cd Keploy-Session-5
-    ```
+      ```
+      git clone https://github.com/ananyab1909/Keploy-Session-5.git
+      cd Keploy-Session-5
+      ```
 
   2. Scan the C++ project directory - Use scanfiles.py to recursively extract all .cc and .cpp files from any external C++ API directory (e.g., cpp_projects/).
-     ```
-     python scanfile.py
-     ```
+       ```
+       python scanfile.py
+       ```
   3. Generate initial tests - Run run.py to generate basic unit tests using Ollama + Qwen2. This script reads C++ logic and produces corresponding Google Test files.
     ```
     python run.py
     ```
   4. Refine test quality - Improve formatting, remove duplication, and increase correctness using refine.py, which sends each generated test to the LLM with a refinement prompt.
-    ```
-    python refine.py
-    ```
+      ```
+      python refine.py
+      ```
   5. Build, debug, and fix broken tests. Execute built.py to build your project with refined tests. If the build fails, the script captures the logs and sends them to the LLM to regenerate valid tests. If it           passes, it runs the test suite and calculates coverage.
-     ```
-     python built.py
-     ```  
+       ```
+       python built.py
+       ```  
   6. Generate test coverage report - The script uses lcov and genhtml to produce a full HTML coverage report located at:
-     ```
-     coverage_html/index.html
-     ```
+       ```
+       coverage_html/index.html
+       ```
   7. API Integration - If your C++ project exposes REST API endpoints (e.g., via Drogon), ensure the API server is running before running tests that depend on live HTTP interactions.
      
 
